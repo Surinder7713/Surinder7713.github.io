@@ -1,0 +1,111 @@
+body {
+    background-color: #ffffff; /Sets the background color to white/
+    color: #333; //
+    margin: 0; //
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif; //
+  }
+
+  /* General image styles */
+  img {
+      max-width: 100%; /* Ensures images do not exceed their container width*/
+      display: block; /* Removes default inline behavior of images*/
+  }
+  
+  /*Logo styles */
+  .logo {
+    font-size: 200%; /Doubles the font size/
+    padding: 50px 20px; /* Adds 50px padding on top/bottom and 20px on left/right */
+    margin: 0 auto; /*Centers the logo horizontally */
+    max-width: 980px; /Limits the width to 980px/
+  }
+  
+  /*Grid container styles */
+  .grid {
+    margin: 0 auto; /* Centers the grid horizontally */
+    padding: 0 20px; /* Adds 20px padding on left and right */
+    max-width: 980px; /* Limits the width to 980px */
+    display: flex; /* Uses flexbox for layout */
+  }
+  
+  /*  Navigation bar styles */ 
+  nav {
+    background-color: #000; /Sets background color to black/
+    padding: .5em; /* Adds padding */
+  }
+  
+  nav ul {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    list-style: none; /*Removes bullet points from list items */ 
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Equal spacing between items */
+  }
+  
+  nav a {
+    color: #fff; /*Sets link color to white */
+    text-decoration: none; /Removes underline from links/
+    padding: .5em 1em; /*Adds padding to links */
+  }
+  
+  /* Photo gallery styles */
+  .photos {
+    list-style: none; /* Removes bullet points from list items*/
+    margin: 0; /*Removes default margin */
+    padding: 0;
+    display: grid; /*Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto)); /*Creates columns with a minimum width of 100px */
+    gap: 1px; /* Adds a 1px gap between grid items */
+  }
+
+  /* Feature image styles */
+  .feature {
+    width: 200px; /*Sets a fixed width */
+    float: left; /* Floats the element to the left */
+    padding-bottom: 5px; /* Adds padding to the bottom */
+    padding-left: 5px; /* Adds padding to the left */
+    
+  }
+
+  article img.feature {
+    float: left;
+    margin: 0 10px 10px 0; /* Add margin for spacing */
+    max-width: 50%; /* Set a maximum width for responsiveness */
+  }
+
+  main {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: 1fr 1fr; /* Two columns of equal size */
+    grid-gap: 10px; /* Add spacing between columns */
+  }
+  
+  article, aside {
+    padding: 10px; /* Add padding for content */
+  }
+
+  aside .photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal size */
+    grid-gap: 1px; /* Add a small gap between images */
+  }
+  
+  aside .photos li {
+    margin: 0; /* Remove margin from list items */
+  }
+  
+  aside .photos img {
+    width: 100%; /* Make images fill the width of their grid cell */
+  }
+  
+  /* Media query for responsiveness */
+@media (max-width: 515px) {
+    main {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  
+    article img.feature {
+      float: none; 
+      display: block; /* Displays image as block element */
+      margin: 10px auto; /* Center the image on smaller screens */
+      max-width: 100%; /* Adjust to fit the content area */
+    }
+}
